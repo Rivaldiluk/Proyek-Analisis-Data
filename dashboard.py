@@ -5,8 +5,6 @@ import seaborn as sns
 import gc
 import os
 
-os.makedirs('/content/drive/MyDrive/E-Commerce Public Dataset', exist_ok=True)
-
 rfm = pd.read_csv('D:/Rivaldo/Bangkit 2024/Dicoding/Proyek_Belajar Analisis Data dengan Python/rfm_analysis.csv')
 category_revenue = pd.read_csv('D:/Rivaldo/Bangkit 2024/Dicoding/Proyek_Belajar Analisis Data dengan Python/category_revenue.csv')
 review_analysis = pd.read_csv('D:/Rivaldo/Bangkit 2024/Dicoding/Proyek_Belajar Analisis Data dengan Python/review_analysis.csv')
