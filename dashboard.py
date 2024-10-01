@@ -4,12 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# Load data
-rfm = pd.read_csv('rfm_analysis.csv')  # Update the path as needed
-category_revenue = pd.read_csv('category_revenue.csv')  # Update the path as needed
-review_analysis = pd.read_csv('review_analysis.csv')  # Update the path as needed
+rfm = pd.read_csv('rfm_analysis.csv')
+category_revenue = pd.read_csv('category_revenue.csv')
+review_analysis = pd.read_csv('review_analysis.csv')
 
-# Menambahkan CSS untuk tampilan penuh
 st.markdown(
     """
     <style>
@@ -28,27 +26,23 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Judul Dashboard
 st.title("Dashboard Analisis Data E-Commerce")
 
-# RFM Analysis
 st.header("RFM Analysis")
 st.dataframe(rfm)
 
-# Revenue by Product Category
 st.subheader("Revenue by Product Category")
 st.bar_chart(category_revenue.set_index('product_category_name')['revenue'], use_container_width=True)
 
 plt.figure(figsize=(10, 5))
-top_products = category_revenue.head(10)  # Ambil 10 produk teratas
-sns.barplot(x='revenue', y='product_category_name', data=top_products, palette='viridis', hue=None)  # Update hue parameter
+top_products = category_revenue.head(10)
+sns.barplot(x='revenue', y='product_category_name', data=top_products, palette='viridis', hue='product_category_name', legend=False)
 plt.title('Top 10 Product Categories by Revenue')
 plt.xlabel('Total Revenue')
 plt.ylabel('Product Category')
 st.pyplot(plt)
 plt.close()
 
-# Review Analysis
 st.header("Review Analysis")
 st.dataframe(review_analysis)
 
