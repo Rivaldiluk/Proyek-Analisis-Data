@@ -5,9 +5,9 @@ import seaborn as sns
 import gc
 import os
 
-rfm = pd.read_csv('D:/Rivaldo/Bangkit 2024/Dicoding/Proyek_Belajar Analisis Data dengan Python/rfm_analysis.csv')
-category_revenue = pd.read_csv('D:/Rivaldo/Bangkit 2024/Dicoding/Proyek_Belajar Analisis Data dengan Python/category_revenue.csv')
-review_analysis = pd.read_csv('D:/Rivaldo/Bangkit 2024/Dicoding/Proyek_Belajar Analisis Data dengan Python/review_analysis.csv')
+rfm = pd.read_csv('rfm_analysis.csv')
+category_revenue = pd.read_csv('category_revenue.csv')
+review_analysis = pd.read_csv('review_analysis.csv')
 
 st.markdown(
     """
