@@ -1,0 +1,4 @@
+streamlit
+pandas
+matplotlib==3.9.2
+seaborn
