@@ -4,9 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-rfm = pd.read_csv('rfm_analysis.csv')
-category_revenue = pd.read_csv('category_revenue.csv')
-review_analysis = pd.read_csv('review_analysis.csv')
+# Update the file paths to reflect the new structure
+rfm = pd.read_csv('submission/dashboard/rfm_analysis.csv')
+category_revenue = pd.read_csv('submission/dashboard/category_revenue.csv')
+review_analysis = pd.read_csv('submission/dashboard/review_analysis.csv')
 
 st.markdown(
     """
