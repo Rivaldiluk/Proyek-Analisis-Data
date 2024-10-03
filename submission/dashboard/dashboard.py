@@ -5,9 +5,9 @@ import seaborn as sns
 import os
 
 # Update the file paths to reflect the new structure
-rfm = pd.read_csv('submission/dashboard/rfm_analysis.csv')
-category_revenue = pd.read_csv('submission/dashboard/category_revenue.csv')
-review_analysis = pd.read_csv('submission/dashboard/review_analysis.csv')
+rfm = pd.read_csv('./submission/dashboard/rfm_analysis.csv')
+category_revenue = pd.read_csv('./submission/dashboard/category_revenue.csv')
+review_analysis = pd.read_csv('./submission/dashboard/review_analysis.csv')
 
 # Add CSS for better layout
 st.markdown(
